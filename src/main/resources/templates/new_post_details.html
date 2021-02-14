@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Post</title>
+
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-light bg-danger">
+    <div class="container-fluid">
+        <div>
+            <h1 align="center" class="text-cyan" >#CreateMeme</h1>
+        </div>
+        <a class="navbar-brand" href="#">
+            <img src="/styles/assets/m_w.png" width="75" height="75" class="d-inline-block align-top">
+        </a>
+
+        <!--  <button type="button" class="btn btn-secondary btn-lg" th:href="@{/postMeme}">Create Post</button>-->
+        <!-- <a class="btn btn-primary" th:href="@{/newMemer}" role="button" align="right">Login</a>
+        <a class="btn btn-primary" th:href="@{/logout}" role="button" align="right">Logout</a> -->
+    </div>
+</nav>
+
+
+
+
+<!--<form th:action="@{/newPost}" th:object="${request}" method="post" style="max-width: 500px; margin: 0 auto;" >-->
+
+<!--    <div class="form-group">-->
+<!--        <label>Name:</label>-->
+<!--        <input type="text"  th:field="*{memeOwner}" class="form-control" id="inputName" placeholder="ownerName">-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label>Caption:</label>-->
+<!--        <input type="text"  th:field="*{memeCaption}" class="form-control" id="inputCaption" placeholder="caption">-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--        <label>Image URL:</label>-->
+<!--        <input type="text"  th:field="*{memeImgUrl}" class="form-control" id="inputURL" placeholder="url">-->
+<!--    </div>-->
+
+
+<!--    <div>-->
+<!--        <button type="submit" class="btn btn-primary">Make Post</button>-->
+<!--    </div>-->
+
+<!--</form>-->
+
+<div style="background-color: #F5F5DC; margin: auto;">
+    <div class="jumbotron vertical-center">
+        <div class="container pt-4 bg-info" >
+
+            <form th:action="@{/memes}" th:object="${request}" method="post" style="max-width: 500px; margin: 0 auto;" >
+
+                    <div class="col-md-6">
+
+                        <div class="form-group" style="margin:1rem;">
+                            <label for="name">Meme Owner Name</label>
+                            <input type="text" class="form-control" placeholder="" id="name" th:field="*{memeOwner}" required>
+                        </div>
+
+                        <div class="form-group" style="margin:1rem;">
+                            <label for="caption">Meme Caption</label>
+                            <input type="text" class="form-control" placeholder="" id="caption" th:field="*{memeCaption}" required>
+                        </div>
+
+                        <div class="form-group" style="margin:1rem;">
+                            <label for="url">Meme Images Url <small>(http://...)</small></label>
+                            <input type="url" class="form-control" id="url" placeholder="url" th:field="*{memeImgUrl}" required maxlength="255">
+                        </div>
+
+                    </div>
+
+                <button type="submit" class="btn btn-primary" style="margin:2rem; align:center">Make Post</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<footer style="padding: 8px;background-color: #990033;bottom: 0;margin: 0 auto;text-align: center;width:100%;position:fixed;">
+    <div>
+        <img src="/styles/assets/m_w.png"  width="75" height="75">
+    </div>
+
+    <div >
+        <a href="https://twitter.com/VishalP73851554"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="https://www.instagram.com/_v_prajapat/"><i class="fa fa-instagram fa-2x"></i></a>
+        <a href="https://www.linkedin.com/in/vishal-prajapat-3b721619b/"><i class="fa fa-linkedin fa-2x"></i></a>
+    </div>
+
+</footer>
+
+</body>
+
+
+</html>
