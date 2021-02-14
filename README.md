@@ -1,4 +1,4 @@
-# meme-planet
+# meme-world
 
 MEME WORLD::->
 
